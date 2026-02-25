@@ -32,22 +32,22 @@ export default function Footer() {
 
     return (
         <div style={{ background: 'linear-gradient(to right, var(--hero-bg), #C5BB9D)', paddingBottom: '40px', paddingTop: '1px' }}>
-            <footer style={{
+            <footer className="footer-main" style={{
                 backgroundColor: '#F9F9F9',
                 color: '#000',
-                padding: 'clamp(4rem, 10vw, 6rem) clamp(8rem, 25vw, 28rem)',
+                padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 28rem)',
                 margin: '40px auto',
                 borderRadius: '32px',
-                maxWidth: '90%',
+                maxWidth: 'var(--max-width)',
                 width: '100%',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
             }}>
-                <div style={{
+                <div className="footer-content" style={{
                     display: 'flex',
                     flexDirection: 'row',
                     flexWrap: 'wrap',
                     justifyContent: 'space-between',
-                    alignItems: 'center',
+                    alignItems: 'flex-start',
                     gap: '3rem',
                 }}>
                     {/* Brand Info */}

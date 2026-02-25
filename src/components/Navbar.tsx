@@ -18,6 +18,18 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
+  // Lock scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -27,12 +39,16 @@ export default function Navbar() {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        maxWidth: '90%',
+        maxWidth: isOpen ? '100%' : '90%',
         margin: '0 auto',
         width: '100%',
-        position: 'relative',
-        zIndex: 100,
-        backgroundColor: 'transparent'
+        position: isOpen ? 'fixed' : 'relative',
+        top: isOpen ? 0 : 'auto',
+        left: isOpen ? 0 : 'auto',
+        right: isOpen ? 0 : 'auto',
+        zIndex: 1000,
+        backgroundColor: 'transparent',
+        transition: 'all 0.3s ease'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Link href="/home" style={{ display: 'flex', alignItems: 'center' }}>
@@ -155,7 +171,7 @@ export default function Navbar() {
 
           {/* Contact Section */}
           <div style={{ marginTop: '0.2rem' }}>
-            <span style={{
+            <span className="menu-label" style={{
               display: 'block',
               fontSize: '0.75rem',
               fontWeight: 700,

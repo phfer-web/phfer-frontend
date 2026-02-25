@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import NextImage from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
 interface Project {
@@ -80,7 +81,12 @@ export default function WorkPage() {
 
     return (
         <>
-            <main className="animate-fade-up" style={{ marginTop: '5rem', padding: '0 2rem 15vh 2rem' }}>
+            <main className="animate-fade-up" style={{
+                marginTop: '5rem',
+                padding: '0 clamp(1rem, 5vw, 2rem) 15vh clamp(1rem, 5vw, 2rem)',
+                maxWidth: 'var(--max-width)',
+                margin: '5rem auto 0 auto'
+            }}>
                 <h1 style={{
                     fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
                     fontWeight: 800,
@@ -100,7 +106,12 @@ export default function WorkPage() {
                     {t('work.description')}
                 </p>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem' }}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                    gap: 'clamp(2rem, 5vw, 4rem)',
+                    justifyContent: 'center'
+                }}>
                     {projects.map((project) => (
                         <div
                             key={project.id}
@@ -204,17 +215,21 @@ export default function WorkPage() {
                         </button>
 
                         <div style={{ flex: '0 0 40%', position: 'relative', minHeight: '300px' }}>
-                            <div style={{
-                                width: '100%',
-                                height: '100%',
-                                backgroundImage: `url(${selectedProject.imageUrl})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                            }} />
+                            {selectedProject.imageUrl && (
+                                <NextImage
+                                    src={selectedProject.imageUrl}
+                                    alt={selectedProject.title}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    sizes="(max-width: 1100px) 100vw, 40vw"
+                                    priority
+                                />
+                            )}
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
-                                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.3))'
+                                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.3))',
+                                pointerEvents: 'none'
                             }} />
                         </div>
 

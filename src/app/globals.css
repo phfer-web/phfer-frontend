@@ -220,10 +220,36 @@ main {
   }
 
   .floating-menu li a {
-    font-size: 2.4rem !important;
+    font-size: clamp(2rem, 8vw, 2.4rem) !important;
   }
 
   .menu-email {
-    font-size: 0.7rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  .menu-label {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-content>div {
+    min-width: unset !important;
+    width: 100%;
+  }
+
+  .footer-content ul {
+    align-items: center !important;
+  }
+
+  .footer-main {
+    border-radius: 20px !important;
+    padding: 3rem 1.5rem !important;
   }
 }
