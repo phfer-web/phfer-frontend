@@ -30,7 +30,7 @@ export default function WorkPage() {
             tags: ['React', 'Vite', 'Node.js', 'Supabase', 'Google Auth'],
             githubUrl: 'https://github.com/kardio-app/kardio-frontend',
             demoUrl: 'https://kardio.netlify.app/home',
-            imageUrl: 'https://i.ibb.co/zTJD36L0/Captura-de-tela-de-2026-02-24-03-26-54.png',
+            imageUrl: '/kardio-image.png',
             gradient: 'linear-gradient(45deg, #2a2a2a, #1a1a1a)'
         },
         {
@@ -42,7 +42,7 @@ export default function WorkPage() {
             tags: ['React', 'Supabase', 'Google APIs', 'PDF Tools', 'Micro-SaaS'],
             githubUrl: 'https://github.com/dentioo/dentioo-frontend',
             demoUrl: 'https://dentioo.netlify.app/',
-            imageUrl: 'https://i.ibb.co/BKFp9ds9/Captura-de-tela-de-2026-02-24-03-27-54.png',
+            imageUrl: '/dentioo-image.png',
             gradient: 'linear-gradient(45deg, #1a1a1a, #000)'
         },
         {
@@ -53,7 +53,7 @@ export default function WorkPage() {
             about: t('projects.aura.about'),
             tags: ['NASA API', 'Google Maps', 'MySQL', 'Docker', 'React', 'Hackathon'],
             githubUrl: 'https://github.com/nasa-hackaton-app/aura-air-app',
-            imageUrl: 'https://i.ibb.co/HfzNxGVx/aura.png',
+            imageUrl: '/aura-image.png',
             gradient: 'linear-gradient(45deg, #4facfe, #00f2fe)'
         },
         {
@@ -64,7 +64,7 @@ export default function WorkPage() {
             about: t('projects.mvc.about'),
             tags: ['C#', '.NET MVC', 'OOP', 'MySQL', 'CRUD'],
             githubUrl: 'https://github.com/initpedro',
-            imageUrl: 'https://i.ibb.co/Q3R13JWx/Captura-de-tela-de-2026-02-24-03-29-58.png',
+            imageUrl: '/mvc-image.png',
             gradient: 'linear-gradient(45deg, #444, #333)'
         }
     ];
