@@ -35,99 +35,102 @@ export default function Navbar() {
   return (
     <>
       <nav style={{
-        padding: 'var(--nav-padding)',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        maxWidth: isOpen ? '100%' : '90%',
-        margin: '0 auto',
         width: '100%',
         position: isOpen ? 'fixed' : 'relative',
-        top: isOpen ? 0 : 'auto',
-        left: isOpen ? 0 : 'auto',
-        right: isOpen ? 0 : 'auto',
+        top: 0,
+        left: 0,
         zIndex: 1000,
         backgroundColor: 'transparent',
         transition: 'all 0.3s ease'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link href="/home" style={{ display: 'flex', alignItems: 'center' }}>
-            <Image
-              src="/222f200c423f6f352cb33c62645afd89.png"
-              alt="INITPEDRO"
-              width={80}
-              height={50}
-              style={{ objectFit: 'contain' }}
-              priority
-            />
-          </Link>
-        </div>
-
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          {isHome ? (
-            <button
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                padding: 0,
-                position: 'relative',
-                zIndex: 1001
-              }}
-            >
-              <div style={{
-                width: '24px',
-                height: '18px',
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}>
-                <span style={{
-                  width: '100%',
-                  height: '2px',
-                  background: '#000',
-                  transition: 'all 0.3s ease',
-                  transform: isOpen ? 'translateY(8px) rotate(45deg)' : 'none'
-                }} />
-                <span style={{
-                  width: '100%',
-                  height: '2px',
-                  background: '#000',
-                  transition: 'opacity 0.3s ease',
-                  opacity: isOpen ? 0 : 1
-                }} />
-                <span style={{
-                  width: '100%',
-                  height: '2px',
-                  background: '#000',
-                  transition: 'all 0.3s ease',
-                  transform: isOpen ? 'translateY(-8px) rotate(-45deg)' : 'none'
-                }} />
-              </div>
-            </button>
-          ) : (
-            <Link
-              href="/home"
-              aria-label={t('nav.back')}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                color: '#000',
-                transition: 'transform 0.2s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateX(-4px)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateX(0)')}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m15 18-6-6 6-6"></path>
-              </svg>
+        <div style={{
+          padding: 'var(--nav-padding)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          maxWidth: '90%',
+          margin: '0 auto',
+          width: '100%',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Link href="/home" style={{ display: 'flex', alignItems: 'center' }}>
+              <Image
+                src="/222f200c423f6f352cb33c62645afd89.png"
+                alt="INITPEDRO"
+                width={80}
+                height={50}
+                style={{ objectFit: 'contain' }}
+                priority
+              />
             </Link>
-          )}
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {isHome ? (
+              <button
+                onClick={toggleMenu}
+                aria-label="Toggle Menu"
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: 0,
+                  position: 'relative',
+                  zIndex: 1001
+                }}
+              >
+                <div style={{
+                  width: '24px',
+                  height: '18px',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}>
+                  <span style={{
+                    width: '100%',
+                    height: '2px',
+                    background: '#000',
+                    transition: 'all 0.3s ease',
+                    transform: isOpen ? 'translateY(8px) rotate(45deg)' : 'none'
+                  }} />
+                  <span style={{
+                    width: '100%',
+                    height: '2px',
+                    background: '#000',
+                    transition: 'opacity 0.3s ease',
+                    opacity: isOpen ? 0 : 1
+                  }} />
+                  <span style={{
+                    width: '100%',
+                    height: '2px',
+                    background: '#000',
+                    transition: 'all 0.3s ease',
+                    transform: isOpen ? 'translateY(-8px) rotate(-45deg)' : 'none'
+                  }} />
+                </div>
+              </button>
+            ) : (
+              <Link
+                href="/home"
+                aria-label={t('nav.back')}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: '#000',
+                  transition: 'transform 0.2s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateX(-4px)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateX(0)')}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg>
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Floating Menu Dropdown */}

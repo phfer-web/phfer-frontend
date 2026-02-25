@@ -9,20 +9,7 @@ export default function HomePage() {
 
     return (
         <main className="animate-fade-up">
-            <section style={{
-                backgroundColor: 'var(--hero-bg)',
-                width: '100vw',
-                position: 'relative',
-                left: '50%',
-                right: '50%',
-                marginLeft: '-50vw',
-                marginRight: '-50vw',
-                padding: '18vh 2rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
+            <section className="hero-section">
                 <div style={{ maxWidth: 'var(--max-width)', width: '100%' }}>
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
@@ -91,6 +78,25 @@ export default function HomePage() {
             </div>
 
             <style jsx>{`
+                .hero-section {
+                    background-color: var(--hero-bg);
+                    width: 100vw;
+                    position: relative;
+                    left: 50%;
+                    right: 50%;
+                    margin-left: -50vw;
+                    margin-right: -50vw;
+                    padding: 18vh 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @media (max-width: 768px) {
+                    .hero-section {
+                        padding: 4rem 2rem;
+                    }
+                }
                 .cv-button:hover {
                     opacity: 0.8;
                 }
