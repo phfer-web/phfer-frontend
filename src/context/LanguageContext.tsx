@@ -60,7 +60,7 @@ const translations: Record<Language, Record<string, string>> = {
 
         // About
         'about.title': 'About Me',
-        'about.p1': "I'm initpedro. Technology has fascinated me since I was young.",
+        'about.p1': "I'm Pedro Henrique Ferreira Fonseca. Technology has fascinated me since I was young.",
         'about.p2': "In 2015, I began exploring this universe more deeply through online games, forums, and downloading music—just like many others at the time. I never took formal IT courses back then, but people would always ask if I had, because I seemed to master everything naturally.",
         'about.p3': 'It was in Habbo Hotel that my passion for the field truly ignited, particularly through "virtual police" roleplay, which simulated real-world organizational structures and routines. I started as a curious player and, over time, dove deeper. I worked remotely and voluntarily for one of these organizations, helping develop spelling and conduct courses for new members, and creating internal documents, forums, and organizational rules.',
         'about.p4': 'I also became involved in building internal systems for team management and operational workflows using BBCode within old phpBB forums to organize digital content.',
@@ -175,7 +175,7 @@ const translations: Record<Language, Record<string, string>> = {
 
         // About
         'about.title': 'Sobre Mim',
-        'about.p1': 'Eu sou o initpedro. A tecnologia me fascina desde que eu era jovem.',
+        'about.p1': 'Eu sou o Pedro Henrique Ferreira Fonseca. A tecnologia me fascina desde que eu era jovem.',
         'about.p2': 'Em 2015, comecei a explorar este universo mais profundamente através de jogos online, fóruns e baixando música—assim como muitos outros na época. Nunca fiz cursos formais de TI naquela época, mas as pessoas sempre me perguntavam se eu tinha feito, porque eu parecia dominar tudo naturalmente.',
         'about.p3': 'Foi no Habbo Hotel que minha paixão pela área realmente acendeu, particularmente através do roleplay de "polícia virtual", que simulava estruturas e rotinas organizacionais do mundo real. Comecei como um jogador curioso e, com o tempo, mergulhei mais fundo. Trabalhei remotamente e voluntariamente para uma dessas organizações, ajudando a desenvolver cursos de ortografia e conduta para novos membros, e criando documentos internos, fóruns e regras organizacionais.',
         'about.p4': 'Também me envolvi na construção de sistemas internos para gestão de equipe e fluxos operacionais usando BBCode em antigos fóruns phpBB para organizar conteúdo digital.',

@@ -1,4 +1,5 @@
 :root {
+  scrollbar-gutter: stable;
   --background: #F9F9F9;
   --foreground: #1A1A1A;
   --hero-bg: #D9CEB2;
@@ -19,7 +20,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
@@ -167,9 +168,9 @@ main {
 
 /* Floating Menu Responsive Styles */
 .floating-menu {
-  position: absolute;
-  top: 1rem;
-  right: -1rem;
+  position: fixed;
+  top: 1.5rem;
+  right: 6rem;
   width: min(440px, 95vw);
   background-color: #F9F9F9;
   padding: 2.8rem 3rem 4rem;

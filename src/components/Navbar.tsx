@@ -22,11 +22,14 @@ export default function Navbar() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     }
     return () => {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     };
   }, [isOpen]);
 
@@ -36,7 +39,7 @@ export default function Navbar() {
     <>
       <nav style={{
         width: '100%',
-        position: isOpen ? 'fixed' : 'relative',
+        position: 'relative',
         top: 0,
         left: 0,
         zIndex: 1000,
