@@ -195,9 +195,11 @@ export default function Chatbot() {
                             key={idx}
                             style={{
                                 display: 'flex',
+                                width: '100%',
                                 gap: '10px',
                                 flexDirection: msg.role === 'user' ? 'row-reverse' : 'row',
-                                alignItems: 'flex-end'
+                                alignItems: 'flex-end',
+                                justifyContent: 'flex-start'
                             }}
                         >
                             {/* Avatar Icon */}
@@ -237,6 +239,7 @@ export default function Chatbot() {
                                     color: msg.role === 'user' ? '#fff' : '#000',
                                     fontSize: '0.9rem',
                                     lineHeight: '1.4',
+                                    textAlign: msg.role === 'user' ? 'right' : 'left',
                                     animation: 'fadeUp 0.3s ease-out forwards',
                                 }}
                             >

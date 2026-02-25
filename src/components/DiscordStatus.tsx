@@ -329,7 +329,7 @@ export default function DiscordStatus() {
                                     width: '10px',
                                     height: '10px',
                                     borderRadius: '50%',
-                                    background: isActive ? statusColors.online : statusColors.offline,
+                                    background: statusColors.online,
                                     border: '2px solid #fff',
                                     boxShadow: '0 0 0 2px rgba(0,0,0,0.05)'
                                 }} />
@@ -365,7 +365,8 @@ export default function DiscordStatus() {
                                     flexDirection: msg.role === 'user' ? 'row-reverse' : 'row',
                                     alignItems: 'flex-end',
                                     alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
-                                    width: '100%'
+                                    width: '100%',
+                                    justifyContent: 'flex-start'
                                 }}>
                                     {/* Avatar Icon */}
                                     <div style={{
@@ -404,6 +405,7 @@ export default function DiscordStatus() {
                                         maxWidth: '75%',
                                         border: msg.role === 'assistant' ? '1px solid #eee' : 'none',
                                         boxShadow: msg.role === 'assistant' ? '0 2px 5px rgba(0,0,0,0.02)' : 'none',
+                                        textAlign: msg.role === 'user' ? 'right' : 'left',
                                         animation: 'fadeUp 0.3s ease-out forwards',
                                     }}>
                                         {msg.content}
@@ -493,12 +495,11 @@ export default function DiscordStatus() {
                 }
                 @media (max-width: 1100px) {
                     .discord-chat-column {
-                        text-align: center;
-                        align-items: center;
+                        text-align: left;
+                        align-items: flex-start;
                     }
                     .discord-chat-header p {
-                        margin-left: auto;
-                        margin-right: auto;
+                        margin-left: 0;
                     }
                 }
             `}</style>
