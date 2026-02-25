@@ -439,7 +439,7 @@ export default function DiscordStatus() {
                                 </div>
                             )}
                         </div>
-                        <form onSubmit={handleSendMessage} style={{ display: 'flex', gap: '0.75rem' }}>
+                        <form onSubmit={handleSendMessage} style={{ display: 'flex', gap: '0.75rem', padding: '0 1.5rem 1.5rem 1.5rem' }}>
                             <input
                                 type="text"
                                 value={chatInput}
