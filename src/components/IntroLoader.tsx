@@ -15,8 +15,8 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
             setIsExiting(true);
             setTimeout(() => {
                 onComplete();
-            }, 600); // Faster fade/blur out duration
-        }, 1500); // Reduced time to show the scribble (faster)
+            }, 300); // Faster fade/blur out duration
+        }, 600); // Reduced time to show the scribble (faster)
 
         return () => clearTimeout(timer);
     }, [onComplete]);
