@@ -113,9 +113,12 @@ export default function HomePage() {
                     position: relative;
                     overflow: hidden;
                 }
-                @media (max-width: 768px) {
+                @media (max-width: 1100px) {
+                    :global(main) {
+                        padding: 0 !important;
+                    }
                     .hero-section {
-                        padding: 4rem 2rem;
+                        padding: 4rem 2rem 10rem 2rem;
                     }
                 }
                 .cv-button:hover {
