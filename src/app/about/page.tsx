@@ -7,7 +7,7 @@ export default function AboutPage() {
     const { t } = useLanguage();
 
     return (
-        <main className="animate-fade-up container" style={{ marginTop: '5rem', paddingTop: '0', paddingBottom: '15vh' }}>
+        <main className="animate-fade-up container" style={{ marginTop: '5rem', paddingTop: '5vh', paddingBottom: '8vh' }}>
             <h1 style={{
                 fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
                 fontWeight: 800,

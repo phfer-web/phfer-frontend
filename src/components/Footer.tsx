@@ -31,12 +31,32 @@ export default function Footer() {
     };
 
     return (
-        <div style={{ background: 'linear-gradient(to right, var(--hero-bg), #C5BB9D)', paddingBottom: '40px', paddingTop: '1px' }}>
+        <div style={{ background: 'linear-gradient(to right, var(--hero-bg), #C5BB9D)', paddingBottom: '40px', paddingTop: '60px', position: 'relative' }}>
+            {/* Modern Wave SVG Separator (Top of Footer) */}
+            <div style={{
+                position: 'absolute',
+                top: '-1px',
+                left: 0,
+                width: '100%',
+                overflow: 'hidden',
+                lineHeight: 0,
+                zIndex: 10
+            }}>
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style={{
+                    position: 'relative',
+                    display: 'block',
+                    width: 'calc(100% + 1.3px)',
+                    height: '70px'
+                }}>
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#F9F9F9"></path>
+                </svg>
+            </div>
+
             <footer className="footer-main" style={{
                 backgroundColor: '#F9F9F9',
                 color: '#000',
                 padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 28rem)',
-                margin: '40px auto',
+                margin: '80px auto 40px auto',
                 borderRadius: '32px',
                 maxWidth: 'var(--max-width)',
                 width: '100%',
