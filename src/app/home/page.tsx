@@ -118,7 +118,7 @@ export default function HomePage() {
                         padding: 0 !important;
                     }
                     .hero-section {
-                        padding: 4rem 2rem 10rem 2rem;
+                        padding: 2.8rem 0rem 9rem 0rem;
                     }
                 }
                 .cv-button:hover {
