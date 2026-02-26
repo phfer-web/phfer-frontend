@@ -81,11 +81,10 @@ export default function WorkPage() {
 
     return (
         <>
-            <main className="animate-fade-up" style={{
+            <main className="animate-fade-up container" style={{
                 marginTop: '5rem',
-                padding: '0 clamp(1rem, 5vw, 2rem) 15vh clamp(1rem, 5vw, 2rem)',
-                maxWidth: 'var(--max-width)',
-                margin: '5rem auto 0 auto'
+                paddingTop: '0',
+                paddingBottom: '15vh'
             }}>
                 <h1 style={{
                     fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',

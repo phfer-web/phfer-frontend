@@ -7,7 +7,7 @@ export default function TermsPage() {
     const { t } = useLanguage();
 
     return (
-        <main style={{ marginTop: '5rem', padding: '0 2rem 15vh 2rem' }}>
+        <main className="container" style={{ marginTop: '5rem', paddingTop: '0', paddingBottom: '15vh' }}>
             <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '2rem' }}>{t('legal.terms.title')}</h1>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', lineHeight: 1.7 }}>
                 <p>{t('legal.terms.p1')}</p>

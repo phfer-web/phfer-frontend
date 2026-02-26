@@ -10,7 +10,7 @@ export default function HomePage() {
     return (
         <main className="animate-fade-up">
             <section className="hero-section">
-                <div style={{ maxWidth: 'var(--max-width)', width: '100%' }}>
+                <div className="container">
                     <h1 style={{
                         fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
                         fontWeight: 800,
@@ -73,20 +73,15 @@ export default function HomePage() {
                 </div>
             </section>
 
-            <div className="animate-fade-up delay-200">
+            <div className="animate-fade-up delay-200 container">
                 <DiscordStatus />
             </div>
 
             <style jsx>{`
                 .hero-section {
                     background-color: var(--hero-bg);
-                    width: 100vw;
-                    position: relative;
-                    left: 50%;
-                    right: 50%;
-                    margin-left: -50vw;
-                    margin-right: -50vw;
-                    padding: 18vh 2rem;
+                    width: 100%;
+                    padding: 18vh 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
